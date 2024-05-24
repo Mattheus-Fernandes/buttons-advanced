@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: grey;
+}
+
+
+.btn-splited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: yellow;
+  letter-spacing: 3px;
+  padding: 25px 50px;
+  border: 3px solid yellow;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-splited::before,
+.btn-splited::after,
+.btn-splited > span::before,
+.btn-splited > span::after  {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: yellow;
+  z-index: -1;
+  transition: all 0.5s;
+ 
+}
+
+.btn-splited::before {
+  top: 0;
+  left: -25%;
+}
+
+.btn-splited:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.btn-splited::after {
+  top: -100%;
+  left: 25%;
+}
+
+a:hover::after {
+  top: 0;
+  left: 25;
+}
+
+.btn-splited > span::before {
+  top: 100%;
+  right: 25%;
+}
+
+.btn-splited:hover > span::before {
+  top: 0;
+  right: 25%;
+}
+
+.btn-splited > span::after {
+  top: 0;
+  right: -25%;
+} 
+
+.btn-splited:hover > span::after {
+  top: 0;
+  right: 0;
+}
+
+.btn-splited:hover {
+  color: grey;
+}
